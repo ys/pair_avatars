@@ -1,6 +1,7 @@
 require 'sinatra'
 require_relative 'compose'
 require 'newrelic_rpm'
+require 'scrolls'
 
 class App < Sinatra::Base
 
@@ -11,6 +12,7 @@ class App < Sinatra::Base
 
   get '/:a/:b' do
     content_type :png
+    Scrolls.log(a: params[:a], b: params[:b])
     Compose.new(params[:a], params[:b]).image
   end
 end

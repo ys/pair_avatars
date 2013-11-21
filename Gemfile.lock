@@ -8,6 +8,7 @@ GEM
       rack
     raindrops (0.12.0)
     rmagick (2.13.2)
+    scrolls (0.3.3)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -24,5 +25,6 @@ PLATFORMS
 DEPENDENCIES
   newrelic_rpm
   rmagick
+  scrolls
   sinatra
   unicorn
